@@ -1,6 +1,54 @@
 /******************
  * YOUR CODE HERE *
  ******************/
+const addAll = (nums) => {
+  let count = 0; //why exactly do I have to start at zero!?
+  for(const num of nums) {
+    count = count + num;//to add all of array together just append
+  }
+  return count;
+}
+addAll([5, 3, 7, -11, 1003])
+
+const countSpaces = (spaces) => {
+  let count = 0;
+  for (const space of spaces) {
+    if (space === ' ') {
+      count ++;
+    }
+  }
+  return count
+}
+countSpaces('well hello there my crumpet')
+
+const makeFriendly = (paragraphs) => {
+  let emptyStr = '';
+for (const paragraph of paragraphs) {
+  //emptyStr = emptyStr + paragraph.replace('.', '!')
+  emptyStr = emptyStr + paragraph.split('.').join('!')
+}
+return emptyStr
+}
+makeFriendly('Do you see the story. Do you see anything. It seems to me I am trying to tell you a dream.')
+
+const addsNoises = (animals) => {
+  let emptyStr = []
+  for (const animal of animals) {
+    if (animal === 'Fido') {
+      emptyStr = emptyStr + animal + ' says Woof! '
+
+    } else if (animal === 'Garfield') {
+      emptyStr = emptyStr + animal + ' says Meow! ' 
+
+    } else if (animal === 'Sharp Tooth') {
+      emptyStr = emptyStr + animal + ' says ROWR.'
+
+    }
+
+  }
+return emptyStr
+}
+addsNoises(['Fido', 'Garfield', 'Sharp Tooth'])
 
 
 
